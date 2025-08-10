@@ -1,0 +1,998 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B748A462E494C4900C99D6D /* InTheZoneWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1B748A262E494C4800C99D6D /* InTheZoneWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B748A062E494C0D00C99D6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7489EE2E494C0C00C99D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B7489F52E494C0C00C99D6D;
+			remoteInfo = InTheZone;
+		};
+		1B748A102E494C0D00C99D6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7489EE2E494C0C00C99D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B7489F52E494C0C00C99D6D;
+			remoteInfo = InTheZone;
+		};
+		1B748A332E494C4900C99D6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7489EE2E494C0C00C99D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B748A252E494C4800C99D6D;
+			remoteInfo = "InTheZoneWatch Watch App";
+		};
+		1B748A3D2E494C4900C99D6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7489EE2E494C0C00C99D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B748A252E494C4800C99D6D;
+			remoteInfo = "InTheZoneWatch Watch App";
+		};
+		1B748A442E494C4900C99D6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B7489EE2E494C0C00C99D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B748A252E494C4800C99D6D;
+			remoteInfo = "InTheZoneWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B748A4A2E494C4900C99D6D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1B748A462E494C4900C99D6D /* InTheZoneWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B7489F62E494C0C00C99D6D /* InTheZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTheZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B748A052E494C0D00C99D6D /* InTheZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InTheZoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B748A0F2E494C0D00C99D6D /* InTheZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InTheZoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B748A262E494C4800C99D6D /* InTheZoneWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InTheZoneWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B748A322E494C4900C99D6D /* InTheZoneWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InTheZoneWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B748A3C2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InTheZoneWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1B5692BC2E4A346C00E8EB27 /* Exceptions for "InTheZone" folder in "InTheZone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1B7489F52E494C0C00C99D6D /* InTheZone */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1B7489F82E494C0C00C99D6D /* InTheZone */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1B5692BC2E4A346C00E8EB27 /* Exceptions for "InTheZone" folder in "InTheZone" target */,
+			);
+			path = InTheZone;
+			sourceTree = "<group>";
+		};
+		1B748A082E494C0D00C99D6D /* InTheZoneTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InTheZoneTests;
+			sourceTree = "<group>";
+		};
+		1B748A122E494C0D00C99D6D /* InTheZoneUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InTheZoneUITests;
+			sourceTree = "<group>";
+		};
+		1B748A272E494C4800C99D6D /* InTheZoneWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "InTheZoneWatch Watch App";
+			sourceTree = "<group>";
+		};
+		1B748A352E494C4900C99D6D /* InTheZoneWatch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "InTheZoneWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		1B748A3F2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "InTheZoneWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B7489F32E494C0C00C99D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A022E494C0D00C99D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A0C2E494C0D00C99D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A232E494C4800C99D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A2F2E494C4900C99D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A392E494C4900C99D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B7489ED2E494C0C00C99D6D = {
+			isa = PBXGroup;
+			children = (
+				1B7489F82E494C0C00C99D6D /* InTheZone */,
+				1B748A082E494C0D00C99D6D /* InTheZoneTests */,
+				1B748A122E494C0D00C99D6D /* InTheZoneUITests */,
+				1B748A272E494C4800C99D6D /* InTheZoneWatch Watch App */,
+				1B748A352E494C4900C99D6D /* InTheZoneWatch Watch AppTests */,
+				1B748A3F2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests */,
+				1B7489F72E494C0C00C99D6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B7489F72E494C0C00C99D6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B7489F62E494C0C00C99D6D /* InTheZone.app */,
+				1B748A052E494C0D00C99D6D /* InTheZoneTests.xctest */,
+				1B748A0F2E494C0D00C99D6D /* InTheZoneUITests.xctest */,
+				1B748A262E494C4800C99D6D /* InTheZoneWatch Watch App.app */,
+				1B748A322E494C4900C99D6D /* InTheZoneWatch Watch AppTests.xctest */,
+				1B748A3C2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B7489F52E494C0C00C99D6D /* InTheZone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B748A192E494C0D00C99D6D /* Build configuration list for PBXNativeTarget "InTheZone" */;
+			buildPhases = (
+				1B7489F22E494C0C00C99D6D /* Sources */,
+				1B7489F32E494C0C00C99D6D /* Frameworks */,
+				1B7489F42E494C0C00C99D6D /* Resources */,
+				1B748A4A2E494C4900C99D6D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B748A452E494C4900C99D6D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B7489F82E494C0C00C99D6D /* InTheZone */,
+			);
+			name = InTheZone;
+			packageProductDependencies = (
+			);
+			productName = InTheZone;
+			productReference = 1B7489F62E494C0C00C99D6D /* InTheZone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B748A042E494C0D00C99D6D /* InTheZoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B748A1C2E494C0D00C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneTests" */;
+			buildPhases = (
+				1B748A012E494C0D00C99D6D /* Sources */,
+				1B748A022E494C0D00C99D6D /* Frameworks */,
+				1B748A032E494C0D00C99D6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B748A072E494C0D00C99D6D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B748A082E494C0D00C99D6D /* InTheZoneTests */,
+			);
+			name = InTheZoneTests;
+			packageProductDependencies = (
+			);
+			productName = InTheZoneTests;
+			productReference = 1B748A052E494C0D00C99D6D /* InTheZoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1B748A0E2E494C0D00C99D6D /* InTheZoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B748A1F2E494C0D00C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneUITests" */;
+			buildPhases = (
+				1B748A0B2E494C0D00C99D6D /* Sources */,
+				1B748A0C2E494C0D00C99D6D /* Frameworks */,
+				1B748A0D2E494C0D00C99D6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B748A112E494C0D00C99D6D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B748A122E494C0D00C99D6D /* InTheZoneUITests */,
+			);
+			name = InTheZoneUITests;
+			packageProductDependencies = (
+			);
+			productName = InTheZoneUITests;
+			productReference = 1B748A0F2E494C0D00C99D6D /* InTheZoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1B748A252E494C4800C99D6D /* InTheZoneWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B748A472E494C4900C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneWatch Watch App" */;
+			buildPhases = (
+				1B748A222E494C4800C99D6D /* Sources */,
+				1B748A232E494C4800C99D6D /* Frameworks */,
+				1B748A242E494C4800C99D6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1B748A272E494C4800C99D6D /* InTheZoneWatch Watch App */,
+			);
+			name = "InTheZoneWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "InTheZoneWatch Watch App";
+			productReference = 1B748A262E494C4800C99D6D /* InTheZoneWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B748A312E494C4900C99D6D /* InTheZoneWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B748A4B2E494C4900C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneWatch Watch AppTests" */;
+			buildPhases = (
+				1B748A2E2E494C4900C99D6D /* Sources */,
+				1B748A2F2E494C4900C99D6D /* Frameworks */,
+				1B748A302E494C4900C99D6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B748A342E494C4900C99D6D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B748A352E494C4900C99D6D /* InTheZoneWatch Watch AppTests */,
+			);
+			name = "InTheZoneWatch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "InTheZoneWatch Watch AppTests";
+			productReference = 1B748A322E494C4900C99D6D /* InTheZoneWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1B748A3B2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B748A4E2E494C4900C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneWatch Watch AppUITests" */;
+			buildPhases = (
+				1B748A382E494C4900C99D6D /* Sources */,
+				1B748A392E494C4900C99D6D /* Frameworks */,
+				1B748A3A2E494C4900C99D6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B748A3E2E494C4900C99D6D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B748A3F2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests */,
+			);
+			name = "InTheZoneWatch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "InTheZoneWatch Watch AppUITests";
+			productReference = 1B748A3C2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B7489EE2E494C0C00C99D6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					1B7489F52E494C0C00C99D6D = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					1B748A042E494C0D00C99D6D = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1B7489F52E494C0C00C99D6D;
+					};
+					1B748A0E2E494C0D00C99D6D = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1B7489F52E494C0C00C99D6D;
+					};
+					1B748A252E494C4800C99D6D = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					1B748A312E494C4900C99D6D = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1B748A252E494C4800C99D6D;
+					};
+					1B748A3B2E494C4900C99D6D = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1B748A252E494C4800C99D6D;
+					};
+				};
+			};
+			buildConfigurationList = 1B7489F12E494C0C00C99D6D /* Build configuration list for PBXProject "InTheZone" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B7489ED2E494C0C00C99D6D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1B7489F72E494C0C00C99D6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B7489F52E494C0C00C99D6D /* InTheZone */,
+				1B748A042E494C0D00C99D6D /* InTheZoneTests */,
+				1B748A0E2E494C0D00C99D6D /* InTheZoneUITests */,
+				1B748A252E494C4800C99D6D /* InTheZoneWatch Watch App */,
+				1B748A312E494C4900C99D6D /* InTheZoneWatch Watch AppTests */,
+				1B748A3B2E494C4900C99D6D /* InTheZoneWatch Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B7489F42E494C0C00C99D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A032E494C0D00C99D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A0D2E494C0D00C99D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A242E494C4800C99D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A302E494C4900C99D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A3A2E494C4900C99D6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B7489F22E494C0C00C99D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A012E494C0D00C99D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A0B2E494C0D00C99D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A222E494C4800C99D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A2E2E494C4900C99D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B748A382E494C4900C99D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B748A072E494C0D00C99D6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B7489F52E494C0C00C99D6D /* InTheZone */;
+			targetProxy = 1B748A062E494C0D00C99D6D /* PBXContainerItemProxy */;
+		};
+		1B748A112E494C0D00C99D6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B7489F52E494C0C00C99D6D /* InTheZone */;
+			targetProxy = 1B748A102E494C0D00C99D6D /* PBXContainerItemProxy */;
+		};
+		1B748A342E494C4900C99D6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B748A252E494C4800C99D6D /* InTheZoneWatch Watch App */;
+			targetProxy = 1B748A332E494C4900C99D6D /* PBXContainerItemProxy */;
+		};
+		1B748A3E2E494C4900C99D6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B748A252E494C4800C99D6D /* InTheZoneWatch Watch App */;
+			targetProxy = 1B748A3D2E494C4900C99D6D /* PBXContainerItemProxy */;
+		};
+		1B748A452E494C4900C99D6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B748A252E494C4800C99D6D /* InTheZoneWatch Watch App */;
+			targetProxy = 1B748A442E494C4900C99D6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B748A172E494C0D00C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B748A182E494C0D00C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B748A1A2E494C0D00C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InTheZone/InTheZone.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InTheZone/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Need Bluetooth to Connect to bike Trainer";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B748A1B2E494C0D00C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InTheZone/InTheZone.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InTheZone/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Need Bluetooth to Connect to bike Trainer";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B748A1D2E494C0D00C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTheZone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InTheZone";
+			};
+			name = Debug;
+		};
+		1B748A1E2E494C0D00C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTheZone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InTheZone";
+			};
+			name = Release;
+		};
+		1B748A202E494C0D00C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InTheZone;
+			};
+			name = Debug;
+		};
+		1B748A212E494C0D00C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InTheZone;
+			};
+			name = Release;
+		};
+		1B748A482E494C4900C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "InTheZoneWatch Watch App/InTheZoneWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InTheZoneWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Rquire Heart Rate to Adjust Resistance";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Rquire Heart Rate to Adjust Resistance";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.campbell.InTheZone;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZone.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		1B748A492E494C4900C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "InTheZoneWatch Watch App/InTheZoneWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InTheZoneWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Rquire Heart Rate to Adjust Resistance";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Rquire Heart Rate to Adjust Resistance";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.campbell.InTheZone;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campbell.InTheZone.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		1B748A4C2E494C4900C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.campbell.InTheZoneWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTheZoneWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InTheZoneWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		1B748A4D2E494C4900C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.campbell.InTheZoneWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTheZoneWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InTheZoneWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		1B748A4F2E494C4900C99D6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.campbell.InTheZoneWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "InTheZoneWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		1B748A502E494C4900C99D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P4T7CK7GA7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.campbell.InTheZoneWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "InTheZoneWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B7489F12E494C0C00C99D6D /* Build configuration list for PBXProject "InTheZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A172E494C0D00C99D6D /* Debug */,
+				1B748A182E494C0D00C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B748A192E494C0D00C99D6D /* Build configuration list for PBXNativeTarget "InTheZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A1A2E494C0D00C99D6D /* Debug */,
+				1B748A1B2E494C0D00C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B748A1C2E494C0D00C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A1D2E494C0D00C99D6D /* Debug */,
+				1B748A1E2E494C0D00C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B748A1F2E494C0D00C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A202E494C0D00C99D6D /* Debug */,
+				1B748A212E494C0D00C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B748A472E494C4900C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A482E494C4900C99D6D /* Debug */,
+				1B748A492E494C4900C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B748A4B2E494C4900C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A4C2E494C4900C99D6D /* Debug */,
+				1B748A4D2E494C4900C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B748A4E2E494C4900C99D6D /* Build configuration list for PBXNativeTarget "InTheZoneWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B748A4F2E494C4900C99D6D /* Debug */,
+				1B748A502E494C4900C99D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B7489EE2E494C0C00C99D6D /* Project object */;
+}
