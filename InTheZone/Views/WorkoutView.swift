@@ -300,75 +300,12 @@ struct WorkoutView: View {
                 Spacer()
             }
             
-            Toggle("Auto Control", isOn: $bluetoothService.isAutoControlEnabled)
-                .tint(Color("PrimaryGreen"))
-            
-            if bluetoothService.isAutoControlEnabled {
-                autoControlInfo
-            } else {
-                jetblackStyleResistanceControl
-            }
+            jetblackStyleResistanceControl
         }
         .padding()
         .background(Color.white)
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
-    }
-    
-    private var autoControlInfo: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                Image(systemName: "brain.head.profile")
-                    .font(.title3)
-                    .foregroundColor(Color("PrimaryGreen"))
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Auto Control Active")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color("PrimaryGreen"))
-                    
-                    Text("Target Zone: \(Int(TrainingConstants.HeartRateZones.lower))–\(Int(TrainingConstants.HeartRateZones.upper)) bpm")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                
-                Spacer()
-            }
-            .padding()
-            .background(Color("PrimaryGreen").opacity(0.1))
-            .cornerRadius(8)
-            
-            // Show cadence control status if enabled
-            if UserDefaults.standard.bool(forKey: "useCadenceControl") {
-                HStack {
-                    Image(systemName: "speedometer")
-                        .font(.caption)
-                        .foregroundColor(Color("SecondaryGreen"))
-                    
-                    Text("Cadence Protection: Min \(Int(UserDefaults.standard.double(forKey: "minCadenceThreshold"))) RPM")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                    
-                    Spacer()
-                    
-                    if let cadence = bluetoothService.trainerData.cadence {
-                        Text("\(formatMetricValue(cadence)) RPM")
-                            .font(.caption)
-                            .fontWeight(.medium)
-                            .foregroundColor(cadence < UserDefaults.standard.double(forKey: "minCadenceThreshold") ? Color("SoftRed") : Color("SecondaryGreen"))
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 8)
-                .background(Color("SecondaryGreen").opacity(0.05))
-                .cornerRadius(6)
-            }
-            
-            Text("Configure target zone in Settings → Heart Rate Zone")
-                .font(.caption)
-                .foregroundColor(.secondary)
-        }
     }
     
     private var jetblackStyleResistanceControl: some View {
@@ -524,24 +461,6 @@ struct WorkoutView: View {
     private var liveChartContent: some View {
         VStack(spacing: 12) {
             Chart {
-                // HR Zone band as a translucent background range
-                let lower = TrainingConstants.HeartRateZones.lower
-                let upper = TrainingConstants.HeartRateZones.upper
-                RectangleMark(
-                    xStart: .value("Start", bluetoothService.powerHistory.first?.timestamp ?? Date()),
-                    xEnd: .value("End", bluetoothService.powerHistory.last?.timestamp ?? Date()),
-                    yStart: .value("Zone Low", lower),
-                    yEnd: .value("Zone High", upper)
-                )
-                .foregroundStyle(Color("SoftRed").opacity(0.15))
-                .annotation(position: .overlay, alignment: .topTrailing) {
-                    Text("HR Zone: \(Int(lower))–\(Int(upper)) bpm")
-                        .font(.caption2)
-                        .padding(4)
-                        .background(.thinMaterial)
-                        .cornerRadius(4)
-                }
-
                 ForEach(bluetoothService.powerHistory) { point in
                     if let p = point.power {
                         LineMark(

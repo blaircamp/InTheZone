@@ -16,9 +16,6 @@ struct SettingsView: View {
                     // Heart Rate Source Section
                     heartRateSourceSection
                     
-                    // Heart Rate Zone Section
-                    heartRateZoneSection
-                    
                     // Resistance Control Settings Section
                     resistanceControlSection
                     
@@ -75,30 +72,6 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(16)
-        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
-    }
-    
-    // MARK: - Heart Rate Zone Section
-    private var heartRateZoneSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack {
-                Image(systemName: "target")
-                    .font(.title2)
-                    .foregroundColor(Color("BrightOrange"))
-                
-                Text("Heart Rate Zone")
-                    .font(.headline)
-                    .foregroundColor(.primary)
-                
-                Spacer()
-            }
-            
-            HeartRateZonePicker()
-                .tint(Color("PrimaryGreen"))
         }
         .padding()
         .background(Color.white)
@@ -198,92 +171,6 @@ struct SettingsView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .center)
                 
-                Divider()
-                
-                // Cadence-Based Control Settings
-                VStack(alignment: .leading, spacing: 12) {
-                    HStack {
-                        Text("Cadence-Based Control")
-                            .font(.subheadline)
-                            .fontWeight(.medium)
-                            .foregroundColor(.primary)
-                        
-                        Spacer()
-                        
-                        Toggle("", isOn: $useCadenceControl)
-                            .labelsHidden()
-                            .tint(Color("PrimaryGreen"))
-                    }
-                    
-                    if useCadenceControl {
-                        VStack(alignment: .leading, spacing: 12) {
-                            // Minimum Cadence Threshold
-                            HStack {
-                                Text("Min Cadence:")
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                
-                                Spacer()
-                                
-                                HStack(spacing: 16) {
-                                    Button(action: {
-                                        minCadenceThreshold = max(40, minCadenceThreshold - 5)
-                                    }) {
-                                        Image(systemName: "minus.circle.fill")
-                                            .font(.title3)
-                                            .foregroundColor(Color("SoftRed"))
-                                    }
-                                    
-                                    Text("\(Int(minCadenceThreshold)) RPM")
-                                        .font(.body)
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(Color("PrimaryGreen"))
-                                        .frame(minWidth: 80)
-                                    
-                                    Button(action: {
-                                        minCadenceThreshold = min(100, minCadenceThreshold + 5)
-                                    }) {
-                                        Image(systemName: "plus.circle.fill")
-                                            .font(.title3)
-                                            .foregroundColor(Color("PrimaryGreen"))
-                                    }
-                                }
-                            }
-                            
-                            // Target Cadence Range
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Target Cadence Range:")
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                
-                                HStack(spacing: 12) {
-                                    ForEach(["60-80", "70-90", "80-100"], id: \.self) { range in
-                                        Button(action: {
-                                            targetCadenceRange = range
-                                        }) {
-                                            Text(range)
-                                                .font(.caption)
-                                                .fontWeight(targetCadenceRange == range ? .bold : .medium)
-                                                .padding(.horizontal, 12)
-                                                .padding(.vertical, 6)
-                                                .background(targetCadenceRange == range ? Color("SecondaryGreen") : Color(.systemGray5))
-                                                .foregroundColor(targetCadenceRange == range ? .white : .primary)
-                                                .cornerRadius(6)
-                                        }
-                                    }
-                                }
-                            }
-                            
-                            Text("If cadence drops below minimum while in heart rate zone, resistance will be reduced to help maintain pedaling speed")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                        .padding()
-                        .background(Color("SecondaryGreen").opacity(0.1))
-                        .cornerRadius(8)
-                    }
-                }
             }
         }
         .padding()

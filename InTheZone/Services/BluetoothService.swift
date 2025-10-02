@@ -19,7 +19,6 @@ final class BluetoothService: NSObject, ObservableObject {
     private var observedResistanceValues: Set<Int> = []
     private var hasSetDynamicRange = false
     @Published var resistanceStateManager = ResistanceStateManager() // Centralized resistance state
-    private var lastLearningUpdateTime: TimeInterval = 0
     
     // Zwift Click integration
     @Published var zwiftClickConnected = false
@@ -35,19 +34,6 @@ final class BluetoothService: NSObject, ObservableObject {
     }() {
         didSet {
             UserDefaults.standard.set(heartRateSource.rawValue, forKey: "heartRateSource")
-            hrFilter2D.reset(); zoneController.reset()
-        }
-    }
-    
-    @Published var isAutoControlEnabled: Bool = {
-        UserDefaults.standard.bool(forKey: "isAutoControlEnabled")
-    }() {
-        didSet {
-            UserDefaults.standard.set(isAutoControlEnabled, forKey: "isAutoControlEnabled")
-            if !isAutoControlEnabled {
-                // Reset controllers when disabled
-                hrFilter2D.reset(); zoneController.reset()
-            }
         }
     }
 
@@ -55,9 +41,6 @@ final class BluetoothService: NSObject, ObservableObject {
     private let communicationService = BluetoothCommunicationService()
     private let sessionManager = TrainerSessionManager()
     private let watchManager = WatchCommunicationManager()
-    // Predictive control components
-    private let hrFilter2D = KalmanHR2DFilter()
-    private let zoneController = HeartRateZoneController()
 
     // Minimal data smoothing/validation state
     private var cancellables = Set<AnyCancellable>()
@@ -98,18 +81,11 @@ final class BluetoothService: NSObject, ObservableObject {
                 // Always update display for live viewing
                 self.trainerData.heartRate = Int(hr)
                 
-                // Only process for recording and control if session is active
+                // Only process for recording if session is active
                 guard self.isSessionActive else { return }
                 
-                let now = Date()
-                let (hrFilt, dhr) = self.hrFilter2D.update(measurement: hr, at: now)
-                let filtered = Int(hrFilt.rounded())
-                self.trainerData.heartRate = filtered
-                self.trainerData.timestamp = now
+                self.trainerData.timestamp = Date()
                 self.sessionManager.recordDataPoint(self.trainerData)
-                Task { @MainActor in
-                    self.evaluateAutoResistance(hr: hrFilt, dhr: dhr, now: now)
-                }
             }
         }.store(in: &cancellables)
         
@@ -213,52 +189,6 @@ final class BluetoothService: NSObject, ObservableObject {
         }
     }
 
-    // MARK: - Predictive auto-resistance control
-    @MainActor
-    private func evaluateAutoResistance(hr: Double, dhr: Double, now: Date) {
-        // Only run auto-resistance when enabled, session active, and trainer capabilities known
-        guard isAutoControlEnabled, isSessionActive, let range = resistanceRange else { return }
-        
-        let zoneLow = TrainingConstants.HeartRateZones.lower
-        let zoneHigh = TrainingConstants.HeartRateZones.upper
-        let current = trainerData.resistance ?? 0
-        
-        // Get cadence control settings
-        let useCadenceControl = UserDefaults.standard.bool(forKey: "useCadenceControl")
-        let minCadenceThreshold = useCadenceControl ? UserDefaults.standard.double(forKey: "minCadenceThreshold") : nil
-        let currentCadence = trainerData.cadence
-        
-        // Update learning system with current HR (throttled to every 5 seconds)
-        let now = Date().timeIntervalSince1970
-        if now - lastLearningUpdateTime >= 5.0 {
-            zoneController.updateLearning(currentHR: hr)
-            lastLearningUpdateTime = now
-        }
-        
-        if let newValue = zoneController.decide(hr: hr, dhr: dhr, now: Date(timeIntervalSince1970: now), zoneLow: zoneLow, zoneHigh: zoneHigh, current: current, range: range, cadence: currentCadence, cadenceThreshold: minCadenceThreshold) {
-            let learningStats = zoneController.getLearningStats()
-            logger.info("Auto-resistance adjustment", source: "BluetoothService", metadata: [
-                "hr": hr,
-                "dhr": dhr,
-                "old_resistance": current,
-                "new_resistance": newValue,
-                "zone_low": zoneLow,
-                "zone_high": zoneHigh,
-                "cadence": currentCadence as Any,
-                "min_cadence": minCadenceThreshold as Any,
-                "learning_points": learningStats["totalLearningPoints"] as Any,
-                "is_learning": learningStats["isLearning"] as Any
-            ])
-            
-            setResistance(newValue)
-            let direction: ResistanceChangeDirection = newValue >= current ? .increase : .decrease
-            let pAt = trainerData.power ?? 0
-            resistanceEvents.append(ResistanceEvent(timestamp: Date(timeIntervalSince1970: now), direction: direction, powerAtEvent: pAt))
-            // Persist in current session for visualization
-            TrainingConstants.SessionManagerProxy.shared.recordAutoResistanceChange(old: current, new: newValue)
-        }
-    }
-
     // MARK: - Public control
     func startScan() { 
         logger.info("Starting Bluetooth scan", source: "BluetoothService")
@@ -289,7 +219,6 @@ final class BluetoothService: NSObject, ObservableObject {
         }
         logger.info("Starting trainer session", source: "BluetoothService")
         _ = sessionManager.startSession()
-        hrFilter2D.reset(); zoneController.reset()
         // Clear previous chart data when starting a new session
         powerHistory.removeAll()
         requestTrainerControl()
@@ -297,7 +226,6 @@ final class BluetoothService: NSObject, ObservableObject {
     func stopSession() {
         logger.info("Stopping trainer session", source: "BluetoothService")
         _ = sessionManager.stopSession()
-        hrFilter2D.reset(); zoneController.reset()
         sendStopCommandToTrainer()
     }
 
@@ -500,20 +428,12 @@ extension BluetoothService: BluetoothCommunicationDelegate {
                 guard isSessionActive else { return }
                 
                 let now = Date()
-                let (hrFilt, dhr) = hrFilter2D.update(measurement: Double(hr), at: now)
-                let filtered = Int(hrFilt.rounded())
-                trainerData.heartRate = filtered
                 trainerData.timestamp = now
                 sessionManager.recordDataPoint(trainerData)
                 
                 logger.debug("Heart rate data processed", source: "BluetoothService", metadata: [
-                    "raw_hr": hr,
-                    "filtered_hr": filtered
+                    "raw_hr": hr
                 ])
-                
-                Task { @MainActor in
-                    evaluateAutoResistance(hr: hrFilt, dhr: dhr, now: now)
-                }
             } else {
                 logger.warning("Invalid heart rate data received", source: "BluetoothService", metadata: [
                     "heart_rate": hr
@@ -625,13 +545,7 @@ extension BluetoothService: BluetoothCommunicationDelegate {
                 // HR arbitration: prefer watch if source is watch/auto and trainer HR missing
                 if let hr = sample.heartRate, HeartRateValidator.isValid(Double(hr)) {
                     if heartRateSource == .trainer || (heartRateSource == .auto && (watchManager.lastHeartRate == 0)) {
-                        let now = Date()
-                        let (hrFilt, dhr) = hrFilter2D.update(measurement: Double(hr), at: now)
-                        let filtered = Int(hrFilt.rounded())
-                        trainerData.heartRate = filtered
-                        Task { @MainActor in
-                            evaluateAutoResistance(hr: hrFilt, dhr: dhr, now: now)
-                        }
+                        trainerData.heartRate = hr
                     }
                 }
                 trainerData.timestamp = sample.timestamp

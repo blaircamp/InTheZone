@@ -52,8 +52,8 @@ struct ResistanceChange: Codable, Identifiable {
     }
 }
 
-enum ResistanceChangeReason: String, Codable, CaseIterable { case manual = "Manual", pid = "PID Control", warmup = "Warm-up", cooldown = "Cooldown"
-    var color: Color { switch self { case .manual: return .blue; case .pid: return .green; case .warmup: return .orange; case .cooldown: return .red } }
+enum ResistanceChangeReason: String, Codable, CaseIterable { case manual = "Manual", warmup = "Warm-up", cooldown = "Cooldown"
+    var color: Color { switch self { case .manual: return .blue; case .warmup: return .orange; case .cooldown: return .red } }
 }
 
 @MainActor
