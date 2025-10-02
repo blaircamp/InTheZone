@@ -19,6 +19,7 @@ final class BluetoothService: NSObject, ObservableObject {
     private var observedResistanceValues: Set<Int> = []
     private var hasSetDynamicRange = false
     @Published var resistanceStateManager = ResistanceStateManager() // Centralized resistance state
+    @Published var activeHeartRateSource: ActiveHeartRateSource = .none
     
     // Zwift Click integration
     @Published var zwiftClickConnected = false
@@ -78,6 +79,7 @@ final class BluetoothService: NSObject, ObservableObject {
             guard let self else { return }
             let useWatch = self.heartRateSource == .watch || (self.heartRateSource == .auto && (self.trainerData.heartRate ?? 0) == 0)
             if useWatch, HeartRateValidator.isValid(hr) {
+                self.activeHeartRateSource = .watch
                 // Always update display for live viewing
                 self.trainerData.heartRate = Int(hr)
                 
@@ -472,6 +474,7 @@ extension BluetoothService: BluetoothCommunicationDelegate {
                 // Also update heart rate display if from trainer
                 if let hr = sample.heartRate, HeartRateValidator.isValid(Double(hr)) {
                     if heartRateSource == .trainer || (heartRateSource == .auto && (watchManager.lastHeartRate == 0)) {
+                        activeHeartRateSource = .trainer
                         trainerData.heartRate = hr
                     }
                 }

@@ -66,6 +66,12 @@ enum FitnessLevel: String, CaseIterable, Codable { case beginner, intermediate, 
 
 enum HeartRateSource: String, CaseIterable, Codable { case watch, trainer, auto }
 
+enum ActiveHeartRateSource {
+    case watch
+    case trainer
+    case none
+}
+
 struct UserProfile: Codable { var age = 35; var weight = 75.0; var fitnessLevel: FitnessLevel = .intermediate; var restingHR = 60; var maxHR: Int { 220 - age } }
 
 // Training constants

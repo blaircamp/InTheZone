@@ -152,7 +152,8 @@ struct WorkoutView: View {
                     value: bluetoothService.trainerData.heartRate.map { String($0) } ?? "--",
                     unit: "BPM",
                     color: Color("SoftRed"),
-                    icon: "heart.fill"
+                    icon: "heart.fill",
+                    source: bluetoothService.activeHeartRateSource
                 )
                 
                 metricCard(
@@ -190,39 +191,52 @@ struct WorkoutView: View {
         }
     }
     
-    private func metricCard(title: String, value: String, unit: String, color: Color, icon: String) -> some View {
+    private func metricCard(title: String, value: String, unit: String, color: Color, icon: String, source: ActiveHeartRateSource? = nil) -> some View {
         VStack(spacing: 8) {
             HStack {
                 Image(systemName: icon)
-                    .font(.title3)
+                    .font(.title2)
                     .foregroundColor(color)
                 
-                Spacer()
+                if let source = source {
+                    let sourceIcon = source == .watch ? "applewatch.watchface" : "bicycle"
+                    let sourceText = source == .watch ? "Watch" : "Trainer"
+                    Spacer()
+                    HStack(spacing: 4) {
+                        Image(systemName: sourceIcon)
+                        Text(sourceText)
+                    }
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 3)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(6)
+                }
             }
             
             VStack(alignment: .leading, spacing: 2) {
                 HStack(alignment: .lastTextBaseline, spacing: 4) {
                     Text(value)
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.system(size: 36, weight: .bold, design: .rounded))
                         .foregroundColor(.primary)
                     
                     Text(unit)
-                        .font(.caption)
+                        .font(.body)
                         .foregroundColor(.secondary)
                         .fontWeight(.medium)
                 }
                 
                 Text(title)
-                    .font(.caption)
+                    .font(.subheadline)
                     .foregroundColor(.secondary)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
         .background(Color.white)
-        .cornerRadius(12)
-        .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 1)
+        .cornerRadius(16)
+        .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
     }
     
     // MARK: - Session Control Section
